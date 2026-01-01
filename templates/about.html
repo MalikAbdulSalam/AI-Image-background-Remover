@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Inject AI Remover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <a href="{{ url_for('index') }}" class="logo-link">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}">
+            <span>Inject AI Background Remover</span>
+        </div>
+    </a>
+</header>
+
+
+<div class="container">
+    <h1>About Inject AI Remover</h1>
+    <p>
+        Inject AI Remover is a web-based tool developed to help users remove image backgrounds instantly.
+        Our AI-based technology ensures fast, secure, and high-quality background removal.
+        Designed by Inject AI Solutions, we prioritize user privacy and efficiency.
+    </p>
+</div>
+
+<footer>
+    © 2025 Inject AI Solutions — Powered by AI
+    <div class="footer-links">
+        <a href="{{ url_for('about') }}">About</a> |
+        <a href="{{ url_for('contact') }}">Contact</a> |
+        <a href="{{ url_for('privacy') }}">Privacy Policy</a> |
+        <a href="{{ url_for('terms') }}">Terms & Conditions</a>
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terms & Conditions - Inject AI Remover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <a href="{{ url_for('index') }}" class="logo-link">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}">
+            <span>Inject AI Background Remover</span>
+        </div>
+    </a>
+</header>
+
+
+<div class="container">
+    <h1>Terms & Conditions</h1>
+    <p>
+        By using Inject AI Remover, you agree to use the service responsibly and legally.
+        You are responsible for the content of the images you upload. Inject AI Remover is not liable for any misuse.
+        We reserve the right to modify or terminate the service at any time.
+    </p>
+</div>
+
+<footer>
+    © 2025 Inject AI Solutions — Powered by AI
+    <div class="footer-links">
+        <a href="{{ url_for('about') }}">About</a> |
+        <a href="{{ url_for('contact') }}">Contact</a> |
+        <a href="{{ url_for('privacy') }}">Privacy Policy</a> |
+        <a href="{{ url_for('terms') }}">Terms & Conditions</a>
+    </div>
+</footer>
+
+
+</body>
+</html>

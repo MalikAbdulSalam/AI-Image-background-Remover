@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Free AI Image Background Remover Online – No Signup</title>
+
+    <meta name="description"
+          content="Remove image background online for free using AI. Fast, secure, no signup required. Perfect for product photos, portraits and design work.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google AdSense -->
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <a href="{{ url_for('index') }}" class="logo-link">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Inject AI Background Remover Logo">
+            <span>AI Image Background Remover</span>
+        </div>
+    </a>
+</header>
+
+<!-- 🔹 TOP AD (High CTR & Safe) -->
+<div style="text-align:center; margin:15px 0;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="1111111111"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<!-- Introduction Section -->
+<div class="intro">
+    <h1>Free AI Image Background Remover</h1>
+    <p>
+        Upload your images and instantly remove backgrounds using AI.
+        Fast, secure, and no signup required.
+    </p>
+</div>
+
+<!-- Processing Spinner -->
+<div class="spinner-overlay" id="spinner">
+    <div class="spinner"></div>
+    <p>Processing images… please wait</p>
+</div>
+
+<div class="container">
+
+    <form method="POST" enctype="multipart/form-data" id="uploadForm">
+        <div class="drop-zone" id="dropZone">
+            <p>Drag & Drop Images Here<br>or Click to Upload</p>
+            <input type="file" name="images" multiple hidden id="fileInput">
+        </div>
+
+        <div id="preview" class="preview-grid"></div>
+
+        <button type="submit" class="process-btn">Remove Background</button>
+    </form>
+
+    {% if processed_files %}
+    <h2 class="section-title">Processed Images</h2>
+
+    <div class="result-grid">
+        {% for img in processed_files %}
+        <div class="card">
+            <img src="{{ url_for('download', filename=img) }}" alt="Background removed image">
+            <a href="{{ url_for('download', filename=img) }}" class="download-btn">Download</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- 🔹 MID AD (Best Performing Placement) -->
+    <div style="text-align:center; margin:25px 0;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="2222222222"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    {% else %}
+    <h2 class="section-title">See Our Samples</h2>
+    <div class="result-grid">
+        <div class="card">
+            <img src="{{ url_for('static', filename='examples/example1.png') }}" alt="Sample background removal">
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='examples/example2.png') }}" alt="Sample background removal">
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='examples/example3.png') }}" alt="Sample background removal">
+        </div>
+    </div>
+    {% endif %}
+
+    {% if history_files %}
+    <h2 class="section-title">Session History</h2>
+    <div class="result-grid">
+        {% for img in history_files %}
+        <div class="card">
+            <img src="{{ url_for('download', filename=img) }}" alt="Previously processed image">
+            <a href="{{ url_for('download', filename=img) }}" class="download-btn">Download</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- 🔹 SEO CONTENT (VERY IMPORTANT FOR AD SENSE & RANKING) -->
+<div class="seo-content">
+    <h2>Remove Image Background Online for Free</h2>
+    <p>Welcome to Inject AI Background Remover — your fastest and easiest solution to remove image backgrounds online. Our AI-powered tool automatically detects the subject of your image and separates it from the background in seconds. There is no need to sign up, install software, or pay for subscriptions. Simply upload your images, click "Remove Background," and download high-quality transparent images instantly.</p>
+
+    <h3>Why Choose Our AI Background Remover?</h3>
+    <ul>
+        <li><strong>100% Free:</strong> Use our tool completely free, no hidden charges.</li>
+        <li><strong>No Login Required:</strong> Your privacy matters — no accounts, no registration.</li>
+        <li><strong>High-Quality Results:</strong> Advanced AI ensures accurate background removal.</li>
+        <li><strong>Fast Processing:</strong> Get your images processed within seconds, even large images.</li>
+        <li><strong>Supports Multiple Formats:</strong> Works with JPG, PNG, and other popular formats.</li>
+        <li><strong>Ideal for Everyone:</strong> Perfect for products, portraits, designs, and social media images.</li>
+    </ul>
+
+    <h3>How to Remove Background in 3 Simple Steps</h3>
+    <ol>
+        <li><strong>Upload Your Image:</strong> Drag & drop your images or click to upload them from your device.</li>
+        <li><strong>Remove Background:</strong> Our AI processes your image automatically to remove the background with precision.</li>
+        <li><strong>Download:</strong> Download your image with a transparent background ready to use for e-commerce, presentations, or social media.</li>
+    </ol>
+
+    <h3>Use Cases for AI Background Removal</h3>
+    <p>Inject AI Background Remover is suitable for a variety of applications:</p>
+    <ul>
+        <li><strong>Product Photography:</strong> Remove backgrounds to create clean images for online stores or catalogs.</li>
+        <li><strong>Social Media & Marketing:</strong> Create professional profile pictures, thumbnails, or marketing banners.</li>
+        <li><strong>Graphic Design:</strong> Quickly extract subjects for posters, flyers, and creative projects.</li>
+        <li><strong>Personal Projects:</strong> Make collages, presentations, or personalized gifts without background distractions.</li>
+    </ul>
+
+    <h3>Frequently Asked Questions</h3>
+    <p><strong>Is this background remover free?</strong><br>Yes, it is completely free to use with no hidden charges.</p>
+    <p><strong>Do you store my images?</strong><br>No, all uploaded images are automatically deleted after processing to protect your privacy.</p>
+    <p><strong>Can I use it for commercial work?</strong><br>Yes, the images you process can be used for commercial or personal projects.</p>
+    <p><strong>How long does it take to remove the background?</strong><br>Most images are processed in just a few seconds, depending on size and complexity.</p>
+    <p><strong>What image formats are supported?</strong><br>JPG, PNG, and most standard image formats are supported.</p>
+    <p><strong>Can I process multiple images at once?</strong><br>Yes, you can upload and process multiple images simultaneously for faster workflow.</p>
+
+    <h3>Why Our Tool is the Best Choice</h3>
+    <p>Unlike other free tools that are slow, require signup, or leave watermarks, Inject AI Background Remover offers a seamless experience with instant results. Our AI engine is trained to handle complex edges, hair details, and product photos accurately. Whether you are a professional designer, an online seller, or someone who wants to edit images quickly, our tool makes background removal effortless and reliable.</p>
+
+    <p>Start using Inject AI Background Remover today and transform your images in seconds. Enjoy a free, fast, and high-quality AI solution that works directly in your browser with no installations or subscriptions required.</p>
+</div>
+
+
+</div>
+
+<footer>
+    <div style="text-align:center; margin:20px 0;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="3333333333"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    © 2025 Inject AI Solutions — Powered by AI
+    <div class="footer-links" style="text-align:center; margin-top:15px;">
+        <a href="{{ url_for('about') }}">About</a> |
+        <a href="{{ url_for('contact') }}">Contact</a> |
+        <a href="{{ url_for('privacy') }}">Privacy Policy</a> |
+        <a href="{{ url_for('terms') }}">Terms & Conditions</a>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
